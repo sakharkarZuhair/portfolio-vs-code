@@ -12,18 +12,21 @@ const List = () => {
       {navigationList?.flatMap(({ name, path, title }, key) => (
         <li
           key={key}
-          className={`border-r-[0.1px] border-[#607B96] w-[140px] cursor-pointer transition-all ${
-            pathName == path && "border-b-[3px] border-b-[#FEA55F]"
-          }`}
+          className={`border-r-[0.1px] border-[#607B96] w-[140px] cursor-pointer transition-all relative hover:bg-white/5`}
         >
           <Link href={path}>
             <Typography
-              className="p-3 w-[100%]"
+              className="p-3 w-[100%] hover:text-white"
               variant={pathName == path ? "active" : "default"}
             >
               {title}
             </Typography>
           </Link>
+          <div
+            className={`absolute w-[100%] bg-[#FEA55F] h-[4px] bottom-[0px] transition-all ${
+              pathName == path ? "visible" : "hidden"
+            }`}
+          />
         </li>
       ))}
     </ul>

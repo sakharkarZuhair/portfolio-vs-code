@@ -19,10 +19,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${fira.className} bg-[#010C15] p-[40px]`}>
-        <div className="bg-[#011627] rounded-[8px] border-[1px] border-[#607B96] h-[100vh]">
+        <div className="bg-[#011627] rounded-[8px] border-[1px] border-[#607B96]">
           <Navbar />
-          {children}
-          <Footer />
+          <div className="h-[400px]">{children}</div>
+          <div className="flex items-end">
+            <Footer />
+          </div>
         </div>
       </body>
     </html>
