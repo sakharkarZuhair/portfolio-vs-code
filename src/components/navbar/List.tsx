@@ -23,7 +23,7 @@ const List = () => {
             </Typography>
           </Link>
           <div
-            className={`absolute w-[100%] bg-[#FEA55F] h-[4px] bottom-[-1px] transition-all ${
+            className={`absolute w-[100%] bg-[#FEA55F] h-[2px] bottom-[-1px] transition-all ${
               pathName == path ? "visible" : "hidden"
             }`}
           />

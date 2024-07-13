@@ -1,4 +1,4 @@
-import { BoltUpLeft, BoltUpRight } from "@/assets/inde";
+import { BoltUpLeft, BoltUpRight } from "@/assets";
 import Image from "next/image";
 import React from "react";
 

@@ -1,6 +1,5 @@
-import { Typography } from "@/components/typography/Typography";
-import Description from "./_components/Description";
-import SnakeGame from "./_components/SnakeGame";
+import Description from "./_components/description";
+import SnakeGame from "./_components/snake-game";
 
 export default function Home() {
   return (
