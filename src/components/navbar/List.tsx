@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { Typography } from "../typography/Typography";
-import { navigationList } from "@/lib/navigation-list";
+import { Navigation, navigationList } from "@/lib/navigation-list";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 
@@ -9,7 +9,7 @@ const List = () => {
   const pathName = usePathname();
   return (
     <ul className="inline-flex items-center text-center">
-      {navigationList?.flatMap(({ name, path, title }, key) => (
+      {navigationList?.flatMap(({ name, path, title }: Navigation, key) => (
         <li
           key={key}
           className={`border-r-[0.1px] border-[#607B96] w-[140px] cursor-pointer transition-all relative hover:bg-white/5`}
@@ -23,7 +23,7 @@ const List = () => {
             </Typography>
           </Link>
           <div
-            className={`absolute w-[100%] bg-[#FEA55F] h-[4px] bottom-[0px] transition-all ${
+            className={`absolute w-[100%] bg-[#FEA55F] h-[4px] bottom-[-1px] transition-all ${
               pathName == path ? "visible" : "hidden"
             }`}
           />

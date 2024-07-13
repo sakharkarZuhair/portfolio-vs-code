@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 
 // Define your typography variants with cva
 const typographyVariants = cva(
-  "inline-flex items-center justify-center whitespace-nowrap transition-colors",
+  "inline-flex items-center justify-center whitespace-nowrap transition-colors m-0",
   {
     variants: {
       variant: {
@@ -17,7 +17,7 @@ const typographyVariants = cva(
         quaternary: "text-[#C98BDF]",
       },
       size: {
-        default: "text-[16px] font-medium",
+        default: "text-[14px] font-medium",
         sm: "text-[18px] font-medium",
         md: "text-[32px] font-medium",
         lg: "text-[62px] font-medium",
