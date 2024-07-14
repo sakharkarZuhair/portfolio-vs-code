@@ -1,5 +1,6 @@
 export interface IconListPrimarySidebar {
   icon: string;
-  link: string;
   hoverText: string;
+  name?: string;
+  activeHeading?: string
 }

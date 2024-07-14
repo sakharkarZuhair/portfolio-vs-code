@@ -8,6 +8,12 @@ import personalInfoIcon from "./SVG/personal-info-icon.svg";
 import professionalInfoIcon from "./SVG/professional-info-icon.svg";
 
 import downIcon from "./SVG/down-icon.svg";
+import rightArrowIcon from "./SVG/right-arrow.svg";
+
+import primaryFolderIcon from "./SVG/primaryFolderIcon.svg";
+import secondaryFolderIcon from "./SVG/secondaryFolderIcon.svg";
+import tertiaryFolderIcon from "./SVG/tertiaryFolderIcon.svg";
+import quatenaryFolderIcon from "./SVG/quatenaryFolderIcon.svg";
 
 export {
   BoltDownLeft,
@@ -18,4 +24,9 @@ export {
   personalInfoIcon,
   professionalInfoIcon,
   downIcon,
+  rightArrowIcon,
+  primaryFolderIcon,
+  secondaryFolderIcon,
+  tertiaryFolderIcon,
+  quatenaryFolderIcon,
 };

@@ -4,21 +4,34 @@ import { IconListPrimarySidebar } from "@/lib/types";
 import NavigationIconPrimary from "./navigation-icon";
 
 const iconsList: IconListPrimarySidebar[] = [
-  { icon: professionalInfoIcon, link: "#", hoverText: "Professional Info" },
-  { icon: personalInfoIcon, link: "#", hoverText: "Personal Info" },
-  { icon: hobbiesIcon, link: "#", hoverText: "Hobbies" },
+  {
+    icon: professionalInfoIcon,
+    hoverText: "Professional Info",
+    name: "professional-info",
+  },
+  {
+    icon: personalInfoIcon,
+    hoverText: "Personal Info",
+    name: "personal-info",
+  },
+  {
+    icon: hobbiesIcon,
+    hoverText: "Hobbies",
+    name: "hobbies-info",
+  },
 ];
 
-const PrimarySidebar = () => {
+const PrimarySidebar = ({ heading }: { heading?: string }) => {
   return (
     <div className="w-[70px] h-[100%] border-r-[1px] border-r-[#607B96]">
       <div className="flex flex-col items-center">
-        {iconsList.map(({ hoverText, icon, link }: IconListPrimarySidebar) => (
+        {iconsList.map(({ hoverText, icon, name }: IconListPrimarySidebar) => (
           <NavigationIconPrimary
-            key={link}
+            key={name}
             hoverText={hoverText}
             icon={icon}
-            link={link}
+            name={name}
+            activeHeading={heading}
           />
         ))}
       </div>
