@@ -5,7 +5,7 @@ import Image from "next/image";
 import React from "react";
 
 const SecondarySidebarHeader = () => {
-  const { type } = useTabStore();
+  const { activeTab } = useTabStore();
 
   return (
     <div className="w-full border-b-[1px] border-b-[#607B96] p-1.5">
@@ -19,7 +19,7 @@ const SecondarySidebarHeader = () => {
             className="h-full w-full object-cover"
           />
         </div>
-        <Typography variant={"active"}>{type}</Typography>
+        <Typography variant={"active"} className="font-normal">{activeTab}</Typography>
       </div>
     </div>
   );

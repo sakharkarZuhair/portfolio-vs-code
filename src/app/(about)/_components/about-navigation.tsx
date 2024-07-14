@@ -1,17 +1,16 @@
 "use client";
-import React, { useMemo } from "react";
 import PrimarySidebar from "./primary-sidebar";
 import SecondarySidebar from "./secondary-sidebar";
 import { useTabStore } from "@/hooks/use-tab-data-store";
 
 const AboutNavigation = () => {
-  const { data, type } = useTabStore();
+  const { activeTab, subActiveData } = useTabStore();
 
   return (
     <div className="flex">
-      <PrimarySidebar heading={data.heading} />
+      <PrimarySidebar heading={activeTab} />
       <SecondarySidebar />
-      <div className="text-white">Cool</div>
+      <div className="text-white"></div>
     </div>
   );
 };

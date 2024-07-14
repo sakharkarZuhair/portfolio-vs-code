@@ -1,5 +1,4 @@
-import { ActiveTabType, useTabStore } from "@/hooks/use-tab-data-store";
-import { useUpdateTabData } from "@/hooks/use-update-tab-data";
+import useUpdateTabData  from "@/hooks/use-update-tab-data";
 import { dataForNavigation } from "@/lib/sub-navigation-data";
 import { IconListPrimarySidebar } from "@/lib/types";
 import Image from "next/image";
@@ -11,16 +10,7 @@ const NavigationIconPrimary = ({
   name,
   activeHeading,
 }: IconListPrimarySidebar) => {
-  const { setTabData } = useTabStore();
-
-  const updateTabData = (newType: any) => {
-    const tabData = dataForNavigation.find((item) => item.heading === newType);
-    if (tabData) {
-      setTabData(newType, tabData);
-    } else {
-      console.error("Tab data not found for type:", newType);
-    }
-  };
+  const updateTabData = useUpdateTabData();
 
   return (
     <div

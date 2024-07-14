@@ -1,22 +1,19 @@
-import { useTabStore, ActiveTabType } from "@/hooks/use-tab-data-store"; // Update with your actual path
-import { dataForNavigation } from "@/lib/sub-navigation-data";
+import {  useTabStore } from './use-tab-data-store';
+import { dataForNavigation } from '../lib/sub-navigation-data';
 
-export const useUpdateTabData = () => {
+const useUpdateTabData = () => {
   const { setTabData } = useTabStore();
 
-  const updateTabData = (type: ActiveTabType) => {
-    console.log("Changing Tab", type);
-
-    const newTabData = dataForNavigation.find(
-      (value: any) => value.heading === type
-    );
-
-    if (newTabData) {
-      setTabData(type, newTabData);
+  const updateTabData = (newType: any) => {
+    const tabData = dataForNavigation.find((item) => item.heading === newType);
+    if (tabData) {
+      setTabData(newType, tabData);
     } else {
-      console.error("Tab data not found for type:", type);
+      console.error("Tab data not found for type:", newType);
     }
   };
 
-  return { updateTabData };
+  return updateTabData;
 };
+
+export default useUpdateTabData;
